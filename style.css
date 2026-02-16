@@ -1,0 +1,53 @@
+/* Import a cleaner monospace font for better legibility */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap');
+
+body {
+    background-color: #212121; /* Slightly deeper dark for better contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+#main {
+    max-width: 900px;
+    padding: 3rem;
+    line-height: 1.5;
+    /* Increased font size and weight for better visibility */
+    font-size: 2.2rem; 
+    font-weight: 500;
+    /* Muted text color is now lighter (greyish) so it's readable but distinct */
+    color: #555555; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+}
+
+#main span {
+    position: relative;
+    transition: color 0.15s ease, background-color 0.2s ease;
+}
+
+/* The Guide: High contrast yellow underline */
+#main span.active {
+    color: #eeeeee; /* Bright white/grey when active */
+    border-bottom: 4px solid #ffd700; 
+}
+
+/* Correct state: Bright white text on a soft green glow */
+#main span.correct {
+    color: #ffffff; 
+    background-color: rgba(76, 175, 80, 0.3); /* Transparent Emerald Green */
+    border-radius: 4px;
+}
+
+/* Incorrect state: Red text for immediate feedback */
+#main span.incorrect {
+    color: #ff5252;
+    border-bottom: 4px solid #ff5252;
+}
